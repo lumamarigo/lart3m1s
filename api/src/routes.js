@@ -1,9 +1,9 @@
 const express = require('express');
+const AlertController = require('./controllers/AlertController');
 
 const routes = express.Router();
 
-routes.get('/', (req, res)=>{
-    return res.json({ teste: 'lartemis' });
-});
+routes.get('/alerts', AlertController.index);
+routes.post('/alerts', AlertController.store);
 
 module.exports = routes;
