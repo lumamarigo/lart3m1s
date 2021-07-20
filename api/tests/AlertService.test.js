@@ -1,9 +1,9 @@
-const AlertService = require('../src/services/AlertService');
 require('../src/database');
+const AlertService = require('../src/services/AlertService');
 
 test('try to add alert and return created alert', async ()=>{
     const alert = {
-        server: 'test',
+        server: 'test2',
         description: 'test',
         server_type: 'test'
     };
@@ -11,3 +11,5 @@ test('try to add alert and return created alert', async ()=>{
     const result = await AlertService.create(alert);
     expect(result.id).not.toBe(undefined);
 });
+
+
