@@ -4,7 +4,8 @@
   "description": "lart3m1s test",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "test": "jest"
   },
   "author": "luma marigo",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
+    "jest": "^27.0.6",
     "nodemon": "^2.0.12",
     "sequelize-cli": "^6.2.0"
   }
