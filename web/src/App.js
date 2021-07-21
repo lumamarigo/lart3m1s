@@ -1,6 +1,7 @@
 
 import { Row, Col } from "antd";
 import './App.css';
+import AlertList from "./components/AlertList";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         Esquerda
       </Col>
       <Col span="9">
-        Direita
+        <AlertList/>
       </Col>
     </Row>
   </div>
