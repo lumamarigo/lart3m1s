@@ -1,5 +1,6 @@
 import React, {useEffect , useState} from "react";
-import { Card, Row, Col } from "antd";
+import { Card, Row, Col, Input } from "antd";
+import { SearchOutlined } from '@ant-design/icons';
 import api from '../../services/api';
 import './index.css';
 
@@ -23,9 +24,12 @@ export default function AlertList(){
     }
     return(
         <div>
+            <div className="site-layout-content">
+                <h2>Alertas dos Servidores</h2>
+            </div>
             <Row style={{ padding: '20px 0' }}>
-                <Col span="12">
-                    <input type="text" onChange={(event)=> handleSearch(event)}/>
+                <Col span="24">
+                    <Input prefix={<SearchOutlined />} size="large" placeholder="Filtrar" onChange={(event)=> handleSearch(event)} />
                 </Col>
             </Row>
             <Row>
