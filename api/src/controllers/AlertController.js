@@ -3,7 +3,11 @@ const AlertService = require('../services/AlertService');
 
 module.exports ={
     async index(req, res){
-        return res.json(await AlertService.search(''));
+        let filter = '';
+        if(req.query.filter != undefined){
+            filter = req.query.filter
+        }
+        return res.json(await AlertService.search(filter));
     },
 
     async store(req, res){
