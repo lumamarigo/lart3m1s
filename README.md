@@ -1,3 +1,5 @@
+Olá! Eu sou a Lumitcha e esse é meu projeto de estudos.
+
 # Instruções
 
 ## Banco de dados

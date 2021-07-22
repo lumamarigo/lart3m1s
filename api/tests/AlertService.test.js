@@ -3,12 +3,19 @@ const AlertService = require('../src/services/AlertService');
 
 test('try to add alert and return created alert', async ()=>{
     const alert = {
-        server: 'test',
+        server: 'server-1',
         description: 'test',
-        server_type: 'test'
+        server_type: 'onprem'
+    };
+
+    const alert2 = {
+        server: 'server-2',
+        description: 'test',
+        server_type: 'virtual'
     };
 
     const result = await AlertService.create(alert);
+    await AlertService.create(alert2);
     expect(result.id).not.toBe(undefined);
 });
 

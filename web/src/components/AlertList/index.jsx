@@ -34,7 +34,7 @@ export default function AlertList(){
             </Row>
             <Row>
                 {alerts?.map((alert)=>(
-                    <Col span="6">
+                    <Col xs={24} sm={24} md={12} lg={6} xl={6}>
                         <Card 
                         key={alert.id}>
                             <p>Descrição: {alert.description}</p>
